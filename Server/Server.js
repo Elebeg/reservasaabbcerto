@@ -8,9 +8,6 @@ const db = new sqlite3.Database(':memory:');
 // Middleware para analisar o corpo das requisições
 app.use(bodyParser.json());
 
-// Defina a porta
-const port = process.env.PORT || 3000;
-
 // Servir arquivos estáticos da pasta 'public'
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -97,6 +94,6 @@ function removePastReservas() {
 setInterval(removePastReservas, 60000);
 
 // Inicia o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Servidor rodando`);
 });
