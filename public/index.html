@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AABB Jandaia Beach Tennis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/Logo.jpg">
+</head>
+<body>
+    <img src="./img/fundo.jpg" alt="AABB">
+    <h1>Beach Tênnis</h1> 
+    <h4>AABB JANDAIA DO SUL</h4>
+    <form id="reservaForm">
+        <label for="nome">Nome do Associado:</label>
+        <input type="text" id="nome" name="nome" required>
+        <h6>*Reservas somente para associados com mensalidade regular.</h6>
+        
+        <label for="instalacao">Quadras:</label>
+        <select id="instalacao" name="instalacao" required>
+            <option id="quadrabeach1" value="quadra beach 1">Quadra de Beach Tennis 1</option>
+            <option id="quadrabeach2" value="quadra beach 2">Quadra de Beach Tennis 2</option>
+        </select>
+        <h6>*De preferência para alternar quadra a cada reserva.</h6>
+        
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data" required>
+        <h6>*Evite de fazer reservas repetitivas, utilizar o mesmo horário todos os dias.</h6>
+        
+        <label for="hora">Hora:</label>
+        <input type="time" id="hora" name="hora" required>
+
+        <label for="horaFinal">Hora Final:</label>
+        <input type="time" id="horaFinal" name="horaFinal" required>
+        <h6>*O tempo limite é de uma(1) hora para cada reserva.</h6>
+        
+        <button type="submit">Reservar</button>
+    </form>
+
+    <h1>Reservas</h1>  
+    <div id="reservasContainer"></div>
+
+    <footer>
+        <p>Desenvolvido por Lucas Schuler Foppa</p>
+        <p>Todos os direitos reservados © <span id="year"></span></p> 
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
